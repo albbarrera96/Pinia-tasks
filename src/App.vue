@@ -1,8 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
-</script>
-
 <template>
     <main style="background:teal">
         <div class="main shadow-sm">
@@ -16,6 +11,18 @@ import { RouterLink, RouterView } from 'vue-router'
     </main>
 
 </template>
+
+<script>
+import { useTaskStore } from './stores/TaskStore'
+
+    setup() {
+        const taskStore = useTaskStore();
+
+        return { taskStore }
+    }
+    
+
+</script>
 
 <style scoped>
 .main{
