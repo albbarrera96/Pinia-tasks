@@ -5,8 +5,13 @@
                 <h1>Pinia Tasks</h1>
             </div>
         </div>
-        <div class="container-xl" id="container">
+        <div class="container-xl my-5 pb-5" id="container">
             <h1>HELLO</h1>
+            <div class="task-list">
+                <div class="card shadow-sm my-2" v-for="task in taskStore.tasks" :key="task.title">
+                    <h1>{{task.title}}</h1>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -15,12 +20,14 @@
 <script>
 import { useTaskStore } from './stores/TaskStore'
 
-    setup() {
-        const taskStore = useTaskStore();
+    export default {
+        setup() {
+            const taskStore = useTaskStore();
 
-        return { taskStore }
+            return  { taskStore } 
+        }
+
     }
-    
 
 </script>
 
