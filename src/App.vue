@@ -1,15 +1,14 @@
 <template>
-    <main style="background:teal">
-        <div class="main shadow-sm">
+    <main>
+        <div class="main shadow-sm bg-secondary">
             <div class="text-center py-3">
                 <h1>Pinia Tasks</h1>
             </div>
         </div>
         <div class="container-xl my-5 pb-5" id="container">
-            <h1>HELLO</h1>
             <div class="task-list">
-                <div class="card shadow-sm my-2" v-for="task in taskStore.tasks" :key="task.title">
-                    <h1>{{task.title}}</h1>
+                <div class="card shadow-sm my-2 py-2 px-1" v-for="task in taskStore.tasks" :key="task.title">
+                    <h3>{{task.title}}</h3>
                 </div>
             </div>
         </div>
@@ -32,8 +31,8 @@ import { useTaskStore } from './stores/TaskStore'
 </script>
 
 <style scoped>
-.main{
-    background: rgb(179, 179, 179);
+main{
+    background: rgb(235, 235, 235);
 }
 
 
